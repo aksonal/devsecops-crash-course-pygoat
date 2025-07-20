@@ -59,7 +59,7 @@ jobs:
         dockerhub-user: ${{secrets.DOCKERHUB_USERNAME}}
         dockerhub-password: ${{secrets.DOCKERHUB_PASSWORD}}
         command: quickview,cves
-        #only-severities: critical, high
+        only-severities: critical, high
         sarif-file: Docker-img-scanning.sarif
 
     - name: Upload report before exiting job instance
