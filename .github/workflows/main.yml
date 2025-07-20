@@ -31,7 +31,7 @@ jobs:
 
   img_run:
     name: Docker image build and scan
-    runs-on: [ubuntu-latest]
+    runs-on: [ubuntu-22.04]
 
     steps:
     - name: Checkout code
@@ -40,7 +40,7 @@ jobs:
     - name: Set up Docker
       uses: docker-practice/actions-setup-docker@v1
       with:
-        docker_version: '24.10.7'
+        docker_version: '22.10.7'
 
     - name: Build Docker image
       run: docker build -f Dockerfile -t mggoat-python-app:latest .
